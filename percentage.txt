@@ -1,0 +1,14 @@
+write a program for percentage formula using apex programming
+
+public class PercentageCalculator {
+    public static Decimal calculatePercentage(Decimal total, Decimal part) {
+        return (part / total) * 100;
+    }
+}
+
+----------------------------------------
+
+Decimal total = 50;
+Decimal part = 20;
+Decimal percentage = PercentageCalculator.calculatePercentage(total, part);
+System.debug('The percentage is: ' + percentage);

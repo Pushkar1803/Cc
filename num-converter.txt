@@ -1,0 +1,36 @@
+Write a program for number to Decimal convertor in Apex programming Language.
+
+public class NumberConverter {
+    public static Decimal intToDec(Integer numValue){
+        return numValue/1.0;        
+    }
+    
+    public static Integer decToInt(Decimal numValue){
+        return (Integer)numValue;
+    }
+}
+
+---------------------------------------------------------
+
+String convType = 'Integer';
+Decimal numValue = 125.12;
+
+Integer result = NumberConverter.decToInt(numValue);
+System.debug(result);
+
+
+--------------------------------------------------------
+
+String convType = 'Integer';
+Decimal numValue = 125.12;
+
+if (convType == 'Integer'){
+    Integer result = NumberConverter.decToInt(numValue);
+    System.debug('The result is: ' + result);
+}
+
+else if (convType == 'Decimal'){
+    
+    Decimal result = NumberConverter.intToDec(numValue);
+    System.debug('The result is: ' + result);
+}
