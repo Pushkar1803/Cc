@@ -1,0 +1,24 @@
+Write a program for Calculator using Apex programming Language.
+
+
+public class Calculator {
+    public static Decimal calculate(String operator, Decimal num1, Decimal num2) {
+        if (operator == '+') return num1 + num2;
+        if (operator == '-') return num1 - num2;
+        if (operator == '*') return num1 * num2;
+        if (operator == '/' && num2 != 0) return num1 / num2;
+        return null;
+    }
+}
+
+
+
+--------------------------------------------
+
+
+Decimal num1 = 10;
+Decimal num2 = 5;
+String operator = '+';
+
+Decimal result = Calculator.calculate(operator, num1, num2);
+System.debug('Result: ' + result);

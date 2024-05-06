@@ -1,0 +1,19 @@
+Write a program for Temperature convertor using Apex programming Language.
+
+public class TempratureConverter {
+    public static Decimal tempConv(Decimal temp, String tempType){
+        if (tempType == 'C') return (temp-32)*5/9;
+        if (tempType == 'F') return (temp*9/5)+32;
+        return null;
+    }
+}
+
+
+--------------------------
+
+
+Decimal temp = 40;
+String tempType = 'F';
+Decimal finalTemp = TempratureConverter.tempConv(temp, tempType);
+
+System.debug('The temprature in' + tempType + 'is: ' + finalTemp);
