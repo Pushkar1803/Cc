@@ -1,0 +1,20 @@
+write a program for percentage formula using apex programming
+
+
+public class percentage {
+    public static void calculatePercentage(Decimal num, Decimal total) {
+        // Check if the total is not zero to avoid division by zero error
+        if (total == 0) {
+            system.debug('error');
+        }
+        // Calculate the percentage
+        Decimal pp = (num / total) * 100;
+        system.debug(pp);
+    }
+}
+
+
+
+----------------------------------------
+
+percentage.calculatePercentage(12.31, 1.2);
