@@ -1,36 +1,16 @@
-Write a program for number to Decimal convertor in Apex programming Language.
-
-public class NumberConverter {
-    public static Decimal intToDec(Integer numValue){
-        return numValue/1.0;        
+public class deccon {
+    public static void convertToDecimal(String binaryNumber) {
+        Integer decimalNumber = 0;
+        Integer power = 0;
+        // Loop through each digit of the binary number from right to left
+        for (Integer i = binaryNumber.length() - 1; i >= 0; i--) {
+            // Convert the character to integer
+            Integer digit = Integer.valueOf(binaryNumber.substring(i, i + 1));
+            // Multiply the digit by 2 raised to the power of its position
+            decimalNumber += digit * (Integer)Math.pow(2, power);
+            // Increment the power for the next position
+            power++;
+        }   
+        System.debug('Decimal representation: ' + decimalNumber);
     }
-    
-    public static Integer decToInt(Decimal numValue){
-        return (Integer)numValue;
-    }
-}
-
----------------------------------------------------------
-
-String convType = 'Integer';
-Decimal numValue = 125.12;
-
-Integer result = NumberConverter.decToInt(numValue);
-System.debug(result);
-
-
---------------------------------------------------------
-
-String convType = 'Integer';
-Decimal numValue = 125.12;
-
-if (convType == 'Integer'){
-    Integer result = NumberConverter.decToInt(numValue);
-    System.debug('The result is: ' + result);
-}
-
-else if (convType == 'Decimal'){
-    
-    Decimal result = NumberConverter.intToDec(numValue);
-    System.debug('The result is: ' + result);
 }
