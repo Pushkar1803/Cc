@@ -1,19 +1,20 @@
-Write a program for Temperature convertor using Apex programming Language.
-
-public class TempratureConverter {
-    public static Decimal tempConv(Decimal temp, String tempType){
-        if (tempType == 'C') return (temp-32)*5/9;
-        if (tempType == 'F') return (temp*9/5)+32;
-        return null;
+public class tempc {
+    public static void ctf(Decimal t) {
+        system.debug((t * 9 / 5) + 32);
+    }
+    public static void ftc(Decimal t) {
+        system.debug((t- 32) * 5 / 9);
+    }
+    public static void ctk(Decimal t) {
+        system.debug(t+ 273.15);
+    }
+    public static void ktc(Decimal t) {
+        system.debug(t - 273.15);
+    }
+    public static void ftk(Decimal t) {
+        system.debug((t +459.67) * 5 / 9);
+    }
+     public static void ktf(Decimal t) {
+        system.debug((t* 9 / 5) - 459.67);
     }
 }
-
-
---------------------------
-
-
-Decimal temp = 40;
-String tempType = 'F';
-Decimal finalTemp = TempratureConverter.tempConv(temp, tempType);
-
-System.debug('The temprature in' + tempType + 'is: ' + finalTemp);
