@@ -1,24 +1,29 @@
-Write a program for Calculator using Apex programming Language.
+public class cal {
+    public static void add(Integer num1, Integer num2) {
+       Integer a= num1 + num2;
+        system.debug(a);
+        
+    }
 
+    public static void subtract(Integer num1, Integer num2) {
+        Integer b= num1 - num2;
+        system.debug(b);
+    }
 
-public class Calculator {
-    public static Decimal calculate(String operator, Decimal num1, Decimal num2) {
-        if (operator == '+') return num1 + num2;
-        if (operator == '-') return num1 - num2;
-        if (operator == '*') return num1 * num2;
-        if (operator == '/' && num2 != 0) return num1 / num2;
-        return null;
+    public static void multiply(Integer num1, Integer num2) {
+       Integer c= num1 * num2;
+        system.debug(c);
+    }
+
+    public static void divide(Integer num1, Integer num2) {
+        Decimal d;
+        if (num2 == 0) {
+            System.debug('Error: Cannot divide by zero.');
+           
+        } else {
+            d=num1 / num2;
+            
+        }
+        system.debug(d);
     }
 }
-
-
-
---------------------------------------------
-
-
-Decimal num1 = 10;
-Decimal num2 = 5;
-String operator = '+';
-
-Decimal result = Calculator.calculate(operator, num1, num2);
-System.debug('Result: ' + result);
